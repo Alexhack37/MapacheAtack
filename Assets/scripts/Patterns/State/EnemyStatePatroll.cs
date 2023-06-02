@@ -31,7 +31,7 @@ public class EnemyStatePatroll : EnemyStateMachine
     }
     private void Update()
     {
-        Debug.Log("Estoy patrullando");
+        //Debug.Log("Estoy patrullando");
 
         if (Input.GetKeyDown(KeyCode.Escape))
             myController.ChangeState(EnemyStateController.State.Chase); //esto es mio

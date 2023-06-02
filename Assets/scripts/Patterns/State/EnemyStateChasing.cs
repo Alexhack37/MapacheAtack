@@ -41,6 +41,7 @@ public class EnemyStateChasing : EnemyStateMachine
         if (target != null)
         {
             target.TakeDmg(100.0f);
+
         }else{
             myController.ChangeState(EnemyStateController.State.Patroll);
         }

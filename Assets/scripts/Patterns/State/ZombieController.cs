@@ -21,7 +21,7 @@ namespace Patterns.State.Components
         public Transform currentWaypoint;
         public Transform[] waypoints;
 
-        private Animator animator;
+        //private Animator animator;
         public Transform eyesTransform;
 
         private GameObject playerAtSight;
@@ -34,7 +34,7 @@ namespace Patterns.State.Components
                 currentWaypoint = waypoints[0];
             }
 
-            animator = gameObject.GetComponent<Animator>();
+            //animator = gameObject.GetComponent<Animator>();
             
             SetState(new SearchingForWaypoint(this));
         }
@@ -62,7 +62,7 @@ namespace Patterns.State.Components
 
         public void SetCurrentSpeed(float speed)
         {
-            animator.SetFloat("MoveSpeed", speed);
+            //animator.SetFloat("MoveSpeed", speed);
         }
         #endregion
 
@@ -127,6 +127,18 @@ namespace Patterns.State.Components
             }
         }
 
+        private void OnCollisionEnter(Collision collision)
+        { // me matas
+            Debug.Log("te toco");
+            IDamageable target = collision.gameObject.GetComponent<IDamageable>();
+            if (target != null)
+            {
+                target.Death();
+
+            }
+        }
+
+
         private void OnTriggerStay(Collider other)
         {
             if (other.CompareTag("Player"))
@@ -143,11 +155,15 @@ namespace Patterns.State.Components
             }
         }
 
+
+
         private GameObject PlayerIsOnSight(GameObject player)
         {
             Vector3 playerDirection = (player.transform.position - transform.position).normalized;
             float angle = Vector3.Angle(transform.forward, playerDirection);
             
+            
+
             if (angle < viewingAngle / 2)
             {
                 RaycastHit hit;
@@ -159,6 +175,7 @@ namespace Patterns.State.Components
                 {
                     if (hit.collider.CompareTag("Player"))
                     {
+                        //Debug.Log("TE HE DADO");
                         return hit.collider.gameObject;
                     }                
                 }
@@ -178,5 +195,6 @@ namespace Patterns.State.Components
             
             transform.Translate(0, 0, speed * Time.fixedDeltaTime, Space.Self);
         }
+
     }
 }

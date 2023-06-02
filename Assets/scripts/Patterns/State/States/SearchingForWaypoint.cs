@@ -21,7 +21,7 @@ namespace Patterns.State.States
             Transform[] waypoints = zombie.GetWayPoints();
             int nextWayPointIndex = (Array.IndexOf(waypoints, zombie.GetCurrentWayPoint()) + 1) % waypoints.Length;
             nextWaypoint = waypoints[nextWayPointIndex];
-            Debug.Log($"Current waypoint {zombie.GetCurrentWayPoint()}, going to waypoint {nextWayPointIndex}");
+            //Debug.Log($"Current waypoint {zombie.GetCurrentWayPoint()}, going to waypoint {nextWayPointIndex}");
             zombie.SetCurrentWayPoint(nextWaypoint);
 
             rotateSpeed = zombie.GetRotateSpeed();   

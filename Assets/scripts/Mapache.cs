@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Mapache : PlayerController, IDamageable
+public class Mapache : SimpleSampleCharacterControl, IDamageable
 {
     // Mapache es el jugador 
     [SerializeField] private float life = 100f;
@@ -19,10 +19,15 @@ public class Mapache : PlayerController, IDamageable
         Debug.Log("destruir");
         //Transform respawn = GameObject.FindGameObjectWithTag("Respawn").transform;
         //transform.position = respawn.position;
-        myCharacter.enabled = false;
+        
+        //myCharacter.enabled = false;
+
+
+
         Transform respawn = GameObject.FindGameObjectWithTag("Respawn").transform;
         transform.position = respawn.position;
-        myCharacter.enabled = true;
+
+        //myCharacter.enabled = true;
     }   
     // Update is called once per frame
 }
