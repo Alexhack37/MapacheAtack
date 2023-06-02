@@ -1,0 +1,4 @@
+repository "MapacheAtack@MapacheGames@cloud"
+  path "/"
+    br "/main"
+    co "/main"
