@@ -190,7 +190,13 @@ public class SimpleSampleCharacterControl : MonoBehaviour
             m_currentDirection = Vector3.Slerp(m_currentDirection, direction, Time.deltaTime * m_interpolation);
 
             transform.rotation = Quaternion.LookRotation(m_currentDirection);
-            transform.position += m_currentDirection * m_moveSpeed * Time.deltaTime;
+            
+
+            Vector3 currentVelo= m_rigidBody.velocity;
+            currentVelo.x = m_currentDirection.x * m_moveSpeed;
+            currentVelo.z = m_currentDirection.z * m_moveSpeed;
+            m_rigidBody.velocity = currentVelo;
+            //transform.position += m_currentDirection * m_moveSpeed * Time.deltaTime;
 
             m_animator.SetFloat("MoveSpeed", direction.magnitude);
         }

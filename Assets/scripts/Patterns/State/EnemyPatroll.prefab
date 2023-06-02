@@ -79,9 +79,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   viewingAngle: 320
-  WanderSpeed: 10
-  ChaseSpeed: 10
-  RotateSpeed: 50
+  WanderSpeed: 30
+  ChaseSpeed: 20
+  RotateSpeed: 100
   currentWaypoint: {fileID: 0}
   waypoints:
   - {fileID: 0}

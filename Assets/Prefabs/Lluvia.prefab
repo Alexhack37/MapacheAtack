@@ -44,10 +44,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faa50442444bb17429d6fb34921044ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gotaPrototype: {fileID: 4323987239313362503, guid: a3516ff158d73c640b695c2807fde349, type: 3}
-  initialNumberOfGotas: 600
+  gotaPrototype: {fileID: 3511109758475428837, guid: 2c08001fc74d8704eba4e7277dbd6ad4, type: 3}
+  initialNumberOfGotas: 50
   allowAddNewGotas: 1
   lloviendo: 1
-  gotasPerSecond: 2
+  gotasPerSecond: 1
   maxGotaSpeed: 30
-  spreadAreaExtent: 60
+  spreadAreaExtent: 500
