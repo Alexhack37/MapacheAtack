@@ -1,18 +1,24 @@
-using System.Collections;
-using System.Collections.Generic;
+using Patterns.Observer.Interfaces;
 using UnityEngine;
 
-public class ObserverSoundSystem : MonoBehaviour
+namespace Patterns.Observer
 {
-    // Start is called before the first frame update
-    void Start()
+    public class ObserverSoundSystem : MonoBehaviour, IObserver<float>
     {
-        
-    }
+        private AudioSource comidaAudio;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        private void Awake()
+        {
+            GameObject player = GameObject.FindWithTag("Player");
+            ObserverBarriga observerBarriga = player.GetComponent<ObserverBarriga>();
+            observerBarriga.AddObserver(this);
+
+            comidaAudio = GetComponent<AudioSource>();
+        }
+
+        public void UpdateObserver(float data)
+        {
+            comidaAudio?.Play();
+        }
     }
 }
