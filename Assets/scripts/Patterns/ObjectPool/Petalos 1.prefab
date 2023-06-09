@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2407593751813092886
+--- !u!1 &2072597380129067887
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,46 +8,46 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8972663490670451841}
-  - component: {fileID: -301267316635497604}
+  - component: {fileID: 4697087780478269944}
+  - component: {fileID: 5078806301454822917}
   m_Layer: 0
-  m_Name: Lluvia
+  m_Name: Petalos 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8972663490670451841
+--- !u!4 &4697087780478269944
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2407593751813092886}
+  m_GameObject: {fileID: 2072597380129067887}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -127, y: 703, z: 252}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-301267316635497604
+--- !u!114 &5078806301454822917
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2407593751813092886}
+  m_GameObject: {fileID: 2072597380129067887}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: faa50442444bb17429d6fb34921044ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gotaPrototype: {fileID: 4323987239313362503, guid: a3516ff158d73c640b695c2807fde349, type: 3}
-  initialNumberOfGotas: 50
+  gotaPrototype: {fileID: 3511109758475428837, guid: 2c08001fc74d8704eba4e7277dbd6ad4, type: 3}
+  initialNumberOfGotas: 5
   allowAddNewGotas: 1
   lloviendo: 1
-  gotasPerSecond: 20
-  maxGotaSpeed: 100
-  spreadAreaExtent: 1200
+  gotasPerSecond: 0.5
+  maxGotaSpeed: 30
+  spreadAreaExtent: 300

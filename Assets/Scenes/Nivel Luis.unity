@@ -562,7 +562,7 @@ MonoBehaviour:
   speed: 1
   lookAtOffset: {x: 0, y: 15, z: 0}
   upDistance: 20
-  distance: 60
+  distance: 130
 --- !u!1 &76452557
 GameObject:
   m_ObjectHideFlags: 0
@@ -4523,25 +4523,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2119595345}
     m_Modifications:
-    - target: {fileID: -301267316635497604, guid: 49bb39ed032e3f54a8a63caa269db599, type: 3}
-      propertyPath: maxGotaSpeed
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: -301267316635497604, guid: 49bb39ed032e3f54a8a63caa269db599, type: 3}
-      propertyPath: gotasPerSecond
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: -301267316635497604, guid: 49bb39ed032e3f54a8a63caa269db599, type: 3}
-      propertyPath: spreadAreaExtent
-      value: 1200
-      objectReference: {fileID: 0}
     - target: {fileID: 2407593751813092886, guid: 49bb39ed032e3f54a8a63caa269db599, type: 3}
       propertyPath: m_Name
       value: Lluvia
       objectReference: {fileID: 0}
+    - target: {fileID: 2407593751813092886, guid: 49bb39ed032e3f54a8a63caa269db599, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8972663490670451841, guid: 49bb39ed032e3f54a8a63caa269db599, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8972663490670451841, guid: 49bb39ed032e3f54a8a63caa269db599, type: 3}
       propertyPath: m_LocalPosition.x
